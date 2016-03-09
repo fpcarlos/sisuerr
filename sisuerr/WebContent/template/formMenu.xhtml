@@ -1,0 +1,17 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+	<h:form id="formmenu">
+		<p:menubar style="width: 100%">
+			<p:menuitem value="Home" url="/" icon="ui-icon-home"
+				style="padding-right: 4px" />
+			<p:submenu label="Usuario" icon="ui-icon-document">
+				<p:menuitem value="Listagem de Usuários"  action="#{usuarioBean.abrirListaUsuario}"/>
+			</p:submenu>	
+			<p:menuitem value="Sair" action="#{logoutBean.logout}"
+				ajax="false" icon="ui-icon-bookmark" style="padding-right: 4px" />
+		</p:menubar>
+	</h:form>
+</ui:composition>
